@@ -1,5 +1,5 @@
 import { html, fixture, expect } from '@open-wc/testing';
-import { stub } from 'sinon';
+// import { stub } from 'sinon';
 import '../src/Customer/Customer-details.js';
 
 let el;
