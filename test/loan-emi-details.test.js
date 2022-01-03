@@ -1,12 +1,10 @@
 import { html, fixture, expect } from '@open-wc/testing';
+import Sinon from 'sinon';
 import '../src/LoanEMIDetails/LoanEMIDetails.js';
 
-let el;
+const el =  await fixture(html`<loanemi-details></loanemi-details>`);
+const button = el.shadowRoot.querySelectorAll('lion-button');
 describe('Loan EMI details', () => {
-  before(async () => {
-    el =  await fixture(html`<loanemi-details></loanemi-details>`);
-  });
-
   it('Accessible' , async () =>{
     expect(el).to.be.accessible();
   });
@@ -16,5 +14,19 @@ describe('Loan EMI details', () => {
     expect(h2).to.exist;
     expect(h2.textContent).to.equal('EMI Details');
   });
+
+  it('spy the method', () => {
+    const func = Sinon.spy(el,"_toBasicDetails");
+    button[0].click();
+    expect(func.calledOnce).to.be.true;
+  });
+
+  it('spy the method', () => {
+    const func = Sinon.spy(el,"_toCustomer");
+    button[1].click();
+    expect(func.calledOnce).to.be.true;
+  });
+
+
   // Write test cases inside this block
 });
