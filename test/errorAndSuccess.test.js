@@ -31,5 +31,13 @@ describe('error screen', () => {
     expect(el).to.be.accessible();
   });
 
+   
+  it('checks for home method' , () => {
+    const func = Sinon.spy(el,"_toHome");
+    const button = el.shadowRoot.querySelectorAll('lion-button');
+    button[0].click();
+    expect(func.calledOnce).to.be.true;
+  });
+
   // Write test cases inside this block
 });

@@ -11,6 +11,7 @@ describe('Basic details', () => {
     expect(fun.calledOnce).to.be.true;
   });
 
+
   it('check for accessebility', () => {
     expect(el).to.be.accessible;
   });
