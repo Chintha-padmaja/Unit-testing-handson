@@ -219,7 +219,7 @@ export class BasicDetails extends LocalizeMixin(LitElement) {
     const _amount = this.shadowRoot.querySelector('.amount').value;
     const _period = this.shadowRoot.querySelector('.period').value;
 
-    if (parseFloat(_amount.replace(/,/g, '')) < 10000) {
+    if (parseFloat(()=> _amount.replace(/,/g, '')) < 10000) {
       // alert('Amount should not be less than 10000');
       this.shadowRoot.querySelector('.amount').classList.add('e-handle');
 

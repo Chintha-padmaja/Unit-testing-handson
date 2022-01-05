@@ -16,9 +16,10 @@ describe('Basic details', () => {
     expect(el).to.be.accessible;
   });
 
-  // it('checks for spy', () => {
-  //   const fun = Sinon.spy(el,"_captureDetails");
-  //   form[1].click();
-  //   expect(fun.calledOnce).to.be.true;
-  // });
+  it('checks for spy', () => {
+    const fun = Sinon.spy(el,"_captureDetails");
+    form[1].click();
+    expect(fun.calledOnce).to.be.true;
+  });
+
 });

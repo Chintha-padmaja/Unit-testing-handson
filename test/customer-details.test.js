@@ -2,7 +2,6 @@ import { html, fixture, expect } from '@open-wc/testing';
 import Sinon from 'sinon';
 import '../src/Customer/Customer-details.js';
 
-
 const el = await fixture(html`<customer-details></customer-details>`);
 const button =  el.shadowRoot.querySelector('lion-button');
 describe('customer details', () => {
