@@ -134,7 +134,7 @@ export class CustomerDetails extends LocalizeMixin(LitElement) {
     return html`
       <div class="container">
         <h2>${localize.msg('change-language:customer')}</h2>
-        <lion-form @submit=${submitHandler}>
+        <lion-form @submit=${this.submitHandler}>
           <form @submit=${ev => ev.preventDefault()}>
             <lion-input
               name="first_name"
